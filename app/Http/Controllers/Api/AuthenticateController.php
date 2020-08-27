@@ -7,21 +7,17 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\User;
 use Illuminate\Http\Request;
 use EasyWeChat\Factory;
-use App\Services\WechatMiniService;
 
 class AuthenticateController extends ApiController
 {
 
     use AuthenticatesUsers;
 
-    protected $wechatMiniService;
-
-    public function __construct(WechatMiniService $wechatMiniService)
+    public function __construct()
     {
         $this->middleware('auth:api')->only([
             'logout'
         ]);
-        $this->wechatMiniService = $wechatMiniService;
     }
 
     public function username()
@@ -29,12 +25,12 @@ class AuthenticateController extends ApiController
         return 'openid';
     }
 
-    // public function easyWechatGetSession($code)
-    // {
-    //     $config = config('wechat.mini_program.default');
-    //     $app = Factory::miniProgram($config);
-    //     return $app->auth->session($code);
-    // }
+    public function easyWechatGetSession($code)
+    {
+        $config = config('wechat.mini_program.default');
+        $app = Factory::miniProgram($config);
+        return $app->auth->session($code);
+    }
 
     /**
      * 处理小程序的自动登陆和注册
@@ -44,10 +40,9 @@ class AuthenticateController extends ApiController
     {
         // 获取openid
         if ($request->code) {
-            $wx_info = $this->wechatMiniService->easyWechatGetSession($request->code);
-            dd($wx_info);
+            $wx_info = $this->easyWechatGetSession($request->code);
         }
-        
+        dd($request->code);
         if (!$request->openid && empty($wx_info['openid'])) {
             if (isset($wx_info) && !empty($wx_info['errmsg'])) {
                 return $this->failed($wx_info['errmsg'], 406);
