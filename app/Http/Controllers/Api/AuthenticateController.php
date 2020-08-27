@@ -4,13 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Passport\Client;
-use Socialite;
-use GuzzleHttp\Client as HttpClient;
 use App\User;
 use Illuminate\Http\Request;
-use Validator;
 use EasyWeChat\Factory;
 
 class AuthenticateController extends ApiController
@@ -47,7 +42,7 @@ class AuthenticateController extends ApiController
         if ($request->code) {
             $wx_info = $this->easyWechatGetSession($request->code);
         }
-dd($wx_info);
+        dd($request->code);
         if (!$request->openid && empty($wx_info['openid'])) {
             if (isset($wx_info) && !empty($wx_info['errmsg'])) {
                 return $this->failed($wx_info['errmsg'], 406);
