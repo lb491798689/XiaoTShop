@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1ded642e838a3f3aeaea5865a38e45d",
+    "content-hash": "23baf4a1871af40da072d37e04c94865",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -1281,6 +1281,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2014-04-08T15:00:19+00:00"
         },
         {
@@ -1325,6 +1326,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
@@ -1973,6 +1975,7 @@
                 "cron",
                 "schedule"
             ],
+            "abandoned": "dragonmantank/cron-expression",
             "time": "2017-01-23T04:29:33+00:00"
         },
         {
@@ -2142,20 +2145,20 @@
         },
         {
             "name": "overtrue/laravel-wechat",
-            "version": "4.0.22",
+            "version": "5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/laravel-wechat.git",
-                "reference": "1d985af7c2d3b27ae5046dbdd3678172fd028490"
+                "reference": "feb3eca83910dac425390aaabcd89896686b9c34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/laravel-wechat/zipball/1d985af7c2d3b27ae5046dbdd3678172fd028490",
-                "reference": "1d985af7c2d3b27ae5046dbdd3678172fd028490",
+                "url": "https://api.github.com/repos/overtrue/laravel-wechat/zipball/feb3eca83910dac425390aaabcd89896686b9c34",
+                "reference": "feb3eca83910dac425390aaabcd89896686b9c34",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "^5.1",
+                "illuminate/container": "^5.1 || ^6.0 || ^7.0",
                 "overtrue/wechat": "^4.0"
             },
             "type": "library",
@@ -2191,7 +2194,7 @@
                 "wechat",
                 "weixin"
             ],
-            "time": "2018-05-23T14:03:58+00:00"
+            "time": "2020-07-28T04:23:13+00:00"
         },
         {
             "name": "overtrue/socialite",
@@ -2502,12 +2505,12 @@
             "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nrk/predis.git",
+                "url": "https://github.com/predis/predis.git",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "url": "https://api.github.com/repos/predis/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "shasum": ""
             },
@@ -4511,6 +4514,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2018-08-10T14:16:32+00:00"
         }
     ],
@@ -6254,5 +6258,6 @@
     "platform": {
         "php": ">=7.0.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

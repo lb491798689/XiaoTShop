@@ -16,7 +16,7 @@
         "laravel/passport": "~4.0",
         "laravel/tinker": "~1.0",
         "orangehill/iseed": "dev-master",
-        "overtrue/laravel-wechat": "~4.0",
+        "overtrue/laravel-wechat": "~5.0",
         "xethron/migrations-generator": "^2.0"
     },
     "require-dev": {
