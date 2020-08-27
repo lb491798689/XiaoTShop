@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'oss'),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,12 +59,12 @@ return [
             'driver'        => 'oss',
             'access_id'     => 'xxx',
             'access_key'    => 'xxxx',
-            'bucket'        => 'xiaot-static',
-            'endpoint'      => 'oss-cn-hangzhou.aliyuncs.com', // OSS 外网节点或自定义外部域名
+            'bucket'        => 'artist-shop',
+            'endpoint'      => 'oss-cn-shanghai.aliyuncs.com', // OSS 外网节点或自定义外部域名
             //'endpoint_internal' => '<internal endpoint [OSS内网节点] 如：oss-cn-shenzhen-internal.aliyuncs.com>', // v2.0.4 新增配置属性，如果为空，则默认使用 endpoint 配置(由于内网上传有点小问题未解决，请大家暂时不要使用内网节点上传，正在与阿里技术沟通中)
             //'cdnDomain'     => '<CDN domain, cdn域名>', // 如果isCName为true, getUrl会判断cdnDomain是否设定来决定返回的url，如果cdnDomain未设置，则使用endpoint来生成url，否则使用cdn
 //            'debug'         => true,
-            'url' => 'https://xiaot-static.oss-cn-hangzhou.aliyuncs.com'
+            'url' => 'https://artist-shop.oss-cn-shanghai.aliyuncs.com'
         ],
 
         's3' => [
