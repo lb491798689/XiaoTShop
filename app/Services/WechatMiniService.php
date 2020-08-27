@@ -5,7 +5,7 @@ namespace App\Services;
 use EasyWeChat\Factory; // https://github.com/overtrue/laravel-wechat
 use Exception;
 
-class WechatMiniService extends BaseService
+class WechatMiniService
 {
     /**
      * Analyze the code and get user openid information
